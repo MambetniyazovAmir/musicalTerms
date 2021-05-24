@@ -10,8 +10,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportFragmentManager.beginTransaction().add(R.id.fragment1,MainFragment()).commit()
-        imgCross.setOnClickListener{
-            imgCross.setBackgroundResource(R.drawable.ic_baseline_close_24)
-        }
+
     }
 }
