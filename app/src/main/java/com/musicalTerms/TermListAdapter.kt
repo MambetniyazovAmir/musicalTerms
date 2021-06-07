@@ -5,9 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.musicalTerms.data.Term
+import com.musicalTerms.detail.DetailActivity
+import com.musicalTerms.detail.WordItemClickListener
 import kotlinx.android.synthetic.main.item_term.view.*
 
-class TermListAdapter : RecyclerView.Adapter<TermListAdapter.TermListViewHolder>() {
+class TermListAdapter(private val listener : WordItemClickListener) : RecyclerView.Adapter<TermListAdapter.TermListViewHolder>() {
 
     var models: List<Term> = listOf()
         set(value) {
@@ -20,6 +22,9 @@ class TermListAdapter : RecyclerView.Adapter<TermListAdapter.TermListViewHolder>
         fun populateModel(term: Term) {
             itemView.tvTerm.text = term.word
             itemView.tvTranslation.text = term.translation
+            itemView.setOnClickListener {
+                listener.wordItemClick(term.id)
+            }
         }
     }
 

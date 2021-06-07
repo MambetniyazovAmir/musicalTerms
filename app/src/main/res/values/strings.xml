@@ -1,4 +1,14 @@
 <resources>
-    <string name="app_name">MusicalTerms</string>
+    <string name="app_name">Musical Terms</string>
     <string name="search">Search</string>
+    <string name="favourite">Избранное</string>
+    <string name="about">О программе</string>
+    <string name="open">Open navigation drawer</string>
+    <string name="close">Close navigation drawer</string>
+    <string name="bookmark">bookmark</string>
+    <string name="home">home</string>
+    <string name="mail">Для обратной связи @timurzaitov1998@gmail.com</string>
+    <string name="about_app">Данное приложение может быть полезно как для начинающих, так и для профессиональных музыкантов, которые ведут свою деятельность сольно или в оркестрах. В словаре представлены часто встречающиеся музыкальные термины и выражения, использованные великими композиторами в своих произведениях на разных языках.\n Для обратной связи <b> timurzaitov1998@gmail.com</b></string>
+    <string name="nav_home">Главная</string>
+    <string name="favourite_empty">Список избранных пуст</string>
 </resources>

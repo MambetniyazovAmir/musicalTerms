@@ -14,5 +14,8 @@ data class Term(
     val word : String,
 
     @ColumnInfo(name = "translation")
-    val translation : String
+    val translation : String,
+
+    @ColumnInfo(name = "favourite")
+    var favourite : Int?
 )
