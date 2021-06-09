@@ -26,7 +26,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        val toolbar1 : Toolbar? = toolbar_detail
+        val toolbar1: Toolbar? = toolbar_detail
         setSupportActionBar(toolbar1)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
@@ -36,7 +36,7 @@ class DetailActivity : AppCompatActivity() {
         tvDetailTerm.text = currentWord.word
         tvDetailTranslation.text = currentWord.translation
         val upArrow = resources.getDrawable(R.drawable.ic_baseline_arrow_back_24)
-        upArrow.setColorFilter(resources.getColor(R.color.white),PorterDuff.Mode.SRC_ATOP)
+        upArrow.setColorFilter(resources.getColor(R.color.white), PorterDuff.Mode.SRC_ATOP)
         supportActionBar?.setHomeAsUpIndicator(upArrow)
 
 

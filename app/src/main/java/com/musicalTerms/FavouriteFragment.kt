@@ -3,6 +3,7 @@ package com.musicalTerms
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.musicalTerms.data.MusicalTermsDatabase
@@ -14,7 +15,7 @@ import kotlinx.android.synthetic.main.favourite_fragment.*
 
 class FavouriteFragment : Fragment(R.layout.favourite_fragment), WordItemClickListener {
 
-    val myAdapter = TermListAdapter(this)
+    private val myAdapter = TermListAdapter(this)
     private lateinit var dao: TermDao
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,12 +32,13 @@ class FavouriteFragment : Fragment(R.layout.favourite_fragment), WordItemClickLi
 
     }
 
-    private fun setData(data : List<Term>){
+    private fun setData(data: List<Term>) {
         myAdapter.models = data
     }
 
     override fun onStart() {
         setData(dao.getFavourite())
+        fav_empty.isVisible = dao.getFavourite().isEmpty()
         super.onStart()
     }
 

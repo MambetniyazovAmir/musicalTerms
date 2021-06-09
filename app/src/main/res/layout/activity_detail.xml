@@ -4,22 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".detail.DetailActivity">
+    tools:context=".detail.DetailActivity"
+    android:background="@color/white">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:theme="@style/ThemeOverlay.AppCompat">
+        android:theme="@style/ThemeOverlay.AppCompat"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_detail"
-            app:titleTextColor="@color/white"
             android:layout_width="match_parent"
-            app:subtitleTextColor="@color/white"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/ThemeOverlay.AppCompat"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat"
+            app:subtitleTextColor="@color/white"
+            app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -27,16 +28,16 @@
         android:id="@+id/tvDetailTerm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_standard"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/super_big"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        android:layout_marginHorizontal="@dimen/margin_standard"
-        android:textColor="@android:color/background_dark"
-        android:textStyle="bold"
-        android:textSize="@dimen/super_big"
-        android:gravity="center"/>
+        app:layout_constraintVertical_bias="0.1" />
 
     <TextView
         android:id="@+id/tvDetailTranslation"
@@ -44,9 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_standard"
         android:layout_marginTop="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDetailTerm"
+        android:textColor="@color/black"
         android:textSize="@dimen/big"
-        android:textColor="@color/black"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailTerm" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

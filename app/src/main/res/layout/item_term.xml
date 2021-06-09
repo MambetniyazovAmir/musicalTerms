@@ -11,7 +11,7 @@
         android:layout_marginHorizontal="@dimen/margin_standard"
         android:layout_marginTop="@dimen/margin_standard"
         android:text="Term"
-        android:textColor="@android:color/black"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
